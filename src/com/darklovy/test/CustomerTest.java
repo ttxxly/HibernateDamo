@@ -24,13 +24,9 @@ public class CustomerTest {
     public void init(){
         //1. 创建配置对象,加载配置文件 hibernate.cfg.xml
         Configuration config = new Configuration().configure();
-        //创建服务注册对象
-        //  ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();（使用这种方法会报错，unkonw Entity 。。。。）
-        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure().build();
-        //创建会话工厂对象
 
         //2. 创建SessionFactory 对象
-        sessionFactory = config.buildSessionFactory(serviceRegistry);
+        sessionFactory = config.buildSessionFactory();
 
         //3. 创建Session会话对象
         session  = sessionFactory.openSession();
