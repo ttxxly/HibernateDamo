@@ -12,8 +12,12 @@
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
 
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
         <mapping resource="com/darklovy/domain/CustomerEntity.hbm.xml"/>
         <mapping class="com.darklovy.domain.CustomerEntity"/>
+
 
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
