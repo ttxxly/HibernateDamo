@@ -4,12 +4,11 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "cst_customer", schema = "hibernate_day01", catalog = "")
-public class CstCustomerEntity {
+@Table(name = "customer", schema = "hibernate", catalog = "")
+public class CustomerEntity {
     private long custId;
     private String custName;
     private Long custUserId;
-
     private Long custCreateId;
     private String custSource;
     private String custIndustry;
@@ -122,7 +121,7 @@ public class CstCustomerEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CstCustomerEntity that = (CstCustomerEntity) o;
+        CustomerEntity that = (CustomerEntity) o;
         return custId == that.custId &&
                 Objects.equals(custName, that.custName) &&
                 Objects.equals(custUserId, that.custUserId) &&

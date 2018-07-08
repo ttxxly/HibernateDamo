@@ -1,12 +1,10 @@
 package com.darklovy.test;
 
-import com.darklovy.domain.CstCustomerEntity;
+import com.darklovy.domain.CustomerEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,7 +36,7 @@ public class CustomerTest {
 
     @Test
     public void testSaveCustomer(){
-        CstCustomerEntity customer = new CstCustomerEntity();
+        CustomerEntity customer = new CustomerEntity();
         customer.setCustName("sgdfhfdfhdghdh");
 
         //5. 保存
